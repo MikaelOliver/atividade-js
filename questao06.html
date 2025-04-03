@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Escreva um programa que comece com este array de frutas
+// frutas=[‘tomate’, ’abacate’, ‘morango’, ‘melancia’] e apresente um
+// menu ao usuário e receba um número do usuário para realizar as
+// seguintes operações:
+// 1 – Adicionar uma fruta no fim da lista (usuário informa a fruta
+// a ser adicionada)
+// 2 – Remover a última fruta da lista
+// 3 – Exibir a(s) n primeiras frutas (usuário informa um número n)
+// 4 – Exibir a(s) n últimas frutas (usuário informa um número n)
+// 5 – Adicionar uma fruta na posição n (usuário informa um
+// número n e a fruta a ser adicionada)
+// Essas opções devem ser utilizadas para realizar as respectivas
+// operações com com os dados fornecidos pelo usuário. Caso
+// seja um número diferente, o programa deve informar “Opção
+// inválida!”.
+
+        let frutas = ['tomate', 'abacate', 'morango', 'melancia'];
+        
+        const menu = () => {
+            return parseInt(prompt(`Escolha uma opção:
+1 - Adicionar uma fruta no fim da lista
+2 - Remover a última fruta da lista
+3 - Exibir a(s) n primeiras frutas
+4 - Exibir a(s) n últimas frutas
+5 - Adicionar uma fruta na posição n`));
+        };
+
+        const adicionarFruta = () => {
+            const fruta = prompt("Digite a fruta que deseja adicionar:");
+            frutas.push(fruta);
+            alert(`Fruta ${fruta} adicionada!`);
+        };
+        
+        const removerFruta = () => {
+            // Validar se a fruta existe antes de remover
+            if (frutas.includes(fruta)){
+                const fruta = frutas.pop();
+            }else {
+                alert("Não há frutas para remover!");
+            }
+            alert(`Fruta ${fruta} removida!`);
+        }
+
+        const exbiirNPrimeirasFrutas = () => {
+            const n = parseInt(prompt("Quantas frutas você deseja exibir?"));
+            if (n > 0 && n <= frutas.length) {
+                alert(`As ${n} primeiras frutas são: ${frutas.slice(0, n)}`);
+            } else {
+                alert("Número inválido!");
+            }
+        }
+
+        const exibirNUltimasFrutas = () => {
+            const ultimaF = parseInt(prompt("Quantas frutas você deseja exibir?"));
+            if (ultimaF > 0 && ultimaF <= frutas.length) {
+                alert(`As ${ultimaF} últimas frutas são: ${frutas.slice(-ultimaF)}`);
+            } else {
+                alert("Número inválido!");
+            }
+        }
+        const adicionarFrutaNaPosicao = () => {
+            const posicao = parseInt(prompt("Digite a posição onde deseja adicionar a fruta:"));
+            const fruta = prompt("Digite a fruta que deseja adicionar:");
+            if (posicao >= 0 && posicao <= frutas.length){
+                frutas.splice(posicao, 0, fruta);
+                alert(`Fruta ${fruta} adicionada na posição ${posicao}!`);
+            } else {
+                alert("Posição inválida!");
+            }
+        }
+
+        const opcao = menu();
+        switch (opcao) {
+            case 1:
+                adicionarFruta();
+                break;
+            case 2:
+                removerFruta();
+                break;
+            case 3:
+                exbiirNPrimeirasFrutas();
+                break;
+            case 4:
+                exibirNUltimasFrutas();
+                break;
+            case 5:
+                adicionarFrutaNaPosicao();
+                break;
+            default:
+                alert("Opção inválida!");
+        }
+
+    </script>
+</body>
+</html>

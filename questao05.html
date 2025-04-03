@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovado ou Reprovado</title>
+</head>
+<body>
+    <script>
+//         Faça um programa que receba do usuário 4 notas referente a
+// quatro bimestres de um aluno e calcule a média. Se a média for
+// maior ou igual a 7, exiba “Aluno Aprovado”, se a média for menor
+// que 7 e maior ou igual a 5, exiba “Aluno de Recuperação”, se a média
+// for menor que 5, exiba “Aluno de Reprovado”.
+
+    const nota1 = parseFloat(prompt("Digite a nota do 1º bimestre:"));
+    const nota2 = parseFloat(prompt("Digite a nota do 2º bimestre:"));
+    const nota3 = parseFloat(prompt("Digite a nota do 3º bimestre:"));
+    const nota4 = parseFloat(prompt("Digite a nota do 4º bimestre:"));
+
+    const aprovadoOuReprovado = ()=> {
+        const media = (nota1 + nota2 + nota3 + nota4) / 4;
+        if (media >= 7) {
+            return "Aluno Aprovado";
+        } else if (media >= 5 && media < 7) {
+            return "Aluno de Recuperação";
+        } else {
+            return "Aluno Reprovado";
+        }
+    };
+    alert(aprovadoOuReprovado());
+
+    </script>
+</body>
+</html>
