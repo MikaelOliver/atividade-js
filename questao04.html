@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F ou M</title>
+</head>
+<body>
+    <script>
+
+        
+        const menu = prompt(`Digite F - para Feminino, M - para Masculino`).toUpperCase()
+        const fOuM = (menu) => {
+            switch(menu){
+                case "F":
+                    return "Feminino"
+                case "M":
+                    return "Masculino"
+                default:
+                    return "Sexo inválido"
+            }
+        }
+        alert(fOuM(menu))
+    </script>
+</body>
+</html>

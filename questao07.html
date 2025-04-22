@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concatenação de listas</title>
+</head>
+<body>
+    <script>
+//         Crie um programa que solicite ao usuário duas notas e
+// armazene-as em uma lista chamada notas1. Em seguida, peça mais
+// duas notas e armazene-as em outra lista chamada notas2. Após
+// isso, exibe as listas notas1 e notas2, além de uma terceira lista,
+// notas3, que contém a concatenação de notas1 e notas2.
+
+
+        const notas1 = [];
+        const notas2 = [];
+
+        const primeiraNota1 = parseFloat(prompt("Digite a primeira nota 1:"));
+        const segundaNota1 = parseFloat(prompt("Digite a segunda nota 1:"));
+        const primeiraNota2 = parseFloat(prompt("Digite a primeira nota 2:"));
+        const segundaNota2 = parseFloat(prompt("Digite a segunda nota 2:"));
+
+        notas1.push(primeiraNota1, segundaNota1);
+        notas2.push(primeiraNota2, segundaNota2);
+
+        const notas3 = notas1.concat(notas2);
+
+        alert(`Notas 1: ${notas1}\nNotas 2: ${notas2}\nNotas 3: ${notas3}`);
+
+
+    </script>
+</body>
+</html>

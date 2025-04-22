@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconto</title>
+</head>
+<body>
+    <script>
+//         Crie um programa que peça ao usuário o valor de um produto e
+// um percentual de desconto, depois exiba o valor final com o
+// desconto aplicado.
+
+
+        const valorProduto = parseFloat(prompt("Digite o valor do produto:"));
+        const percentualDesconto = parseFloat(prompt("Digite o percentual de desconto:"));
+
+        const valorDesconto = (percentualDesconto / 100) * valorProduto;
+        const valorFinal = valorProduto - valorDesconto;
+
+        alert(`O valor do produto é: R$ ${valorProduto.toFixed(2)}\n` +
+              `O percentual de desconto é: ${percentualDesconto}%\n` +
+              `O valor do desconto é: R$ ${valorDesconto.toFixed(2)}\n` +
+              `O valor final com desconto é: R$ ${valorFinal.toFixed(2)}`);
+    </script>
+</body>
+</html>

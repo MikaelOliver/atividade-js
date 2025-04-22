@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const menu = prompt(`Escreva um programa que apresente um menu ao usuário e
+receba um número do usuário para realizar as seguintes operações:
+1 – Somar
+2 – Subtrair
+3 – Dividir
+4 – Multiplicar`)
+        const num1 = parseFloat(prompt("Digite o primeiro número: "))
+        const num2 = parseFloat(prompt("Digite o segundo número: "))
+
+        const calculadora = (num1, num2, menu) => {
+            switch(menu){
+                case "1":
+                    return num1 + num2
+                case "2":
+                    return num1 - num2
+                case "3":
+                    if(num2 === 0){
+                        return "Divisão por zero não é permitida"
+                    } else {
+                        return num1 / num2
+                    }
+                case "4":
+                    return num1 * num2
+                default:
+                    return "Operação inválida"
+            }
+        }
+        alert(calculadora(num1, num2, menu))
+
+    </script>   
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista dentro de Lista</title>
+</head>
+<body>
+    <script>
+//         Crie um programa que solicite ao usuário quatro nomes de alunos
+// e quatro notas, e crie uma lista de duas dimensões (array de arrays)
+// com os valores de nomes e notas informados pelo usuário, criando
+// assim um array de alunos e suas notas: const lista = [alunos, notas].
+// Após isso, solicite ao usuário um nome e verifique se o nome
+// informado existe na lista, se existir, exiba o nome do aluno e a sua
+// respectiva nota, se não existir, mostre “Aluno Inexistente”.
+
+        const aluno1 = [
+            prompt("Digite o nome do aluno 1: "), 
+            parseFloat(prompt("Digite a nota do aluno 1: "))
+        ]
+        const aluno2 = [
+            prompt("Digite o nome do aluno 2: "), 
+            parseFloat(prompt("Digite a nota do aluno 2: "))
+        ]
+        const aluno3 = [
+            prompt("Digite o nome do aluno 3: "), 
+            parseFloat(prompt("Digite a nota do aluno 3: "))
+        ]
+        const aluno4 = [
+            prompt("Digite o nome do aluno 4: "), 
+            parseFloat(prompt("Digite a nota do aluno 4: "))
+        ]
+
+        const lista = [aluno1, aluno2, aluno3, aluno4]
+        const nome = prompt("Digite o nome do aluno que deseja verificar: ")
+
+
+        const verificarAluno = (nome) => {
+            switch (nome) {
+                case lista[0][0]:
+                    alert(`O aluno ${lista[0][0]} tem a nota ${lista[0][1]}`)
+                    break
+                case lista[1][0]:
+                    alert(`O aluno ${lista[1][0]} tem a nota ${lista[1][1]}`)
+                    break
+                case lista[2][0]:
+                    alert(`O aluno ${lista[2][0]} tem a nota ${lista[2][1]}`)
+                    break
+                case lista[3][0]:
+                    alert(`O aluno ${lista[3][0]} tem a nota ${lista[3][1]}`)
+                    break
+                default:
+                    alert("Aluno Inexistente")
+            }
+        }
+
+        verificarAluno(nome)
+    </script>
+</body>
+</html>
